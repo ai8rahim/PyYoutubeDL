@@ -2,6 +2,7 @@
 # Created 26-feb-2014
 # Python script to download youtube videos from local playlist
 # Source: https://pypi.python.org/pypi/Pafy
+# Author: ai8rahim
 """
 
 import sys
