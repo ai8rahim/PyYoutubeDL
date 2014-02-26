@@ -12,7 +12,7 @@ import pafy
 # check for arguments
 if (len(sys.argv)<3):
 	print "Arguments Missing:"
-	print "Usage: python py-youtube-dl.py download_director playlist_file"
+	print "Usage: python py-youtube-dl.py download_directory playlist_file"
 	sys.exit(2)
 
 dl_dir = sys.argv[1] 	# download directory

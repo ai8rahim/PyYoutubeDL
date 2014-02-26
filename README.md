@@ -12,7 +12,7 @@ Pafy 0.3.37
 
 Usage
 -----
-python py-youtube-dl.py download_director playlist_file
+python py-youtube-dl.py download_directory playlist_file
 
 
 Licence
