@@ -8,26 +8,26 @@ import sys
 import pafy
 
 
-
+# check for arguments
 if (len(sys.argv)<3):
 	print "Arguments Missing:"
 	print "Usage: python py-youtube-dl.py download_director playlist_file"
 	sys.exit(2)
 
-dl_dir = sys.argv[1] #'/DATA/mini/140218_'		# path to training dataset including prefix if any
-pl_file = sys.argv[2] #'/DATA/mini/140218_		# path for classifier including prefix if any
+dl_dir = sys.argv[1] 	# download directory
+pl_file = sys.argv[2]	# playlist file location
 
 
 playlist = open(pl_file, "r")
 urls = []
-for item in playlist.readlines():
+for item in playlist.readlines():	# retrieve urls from the playlist
 	urls.append(item)
 	
 playlist.close()
 
 print "Playlist " + pl_file + " imported."
 
-for url in urls:
+for url in urls:	# download all videos in the best format available
 	video = pafy.new(url)
 	best = video.getbest()
 	myfilename = dl_dir + best.title + "." + best.extension
